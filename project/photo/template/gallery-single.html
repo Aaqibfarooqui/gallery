@@ -1,0 +1,243 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Photo - Gallery Single</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Cardo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: PhotoFolio
+  * Updated: Sep 18 2023 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/photofolio-bootstrap-photography-website-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+
+      <a href="/index" class="logo d-flex align-items-center  me-auto me-lg-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <i class="bi bi-camera"></i>
+        <h1>Photo</h1>
+      </a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="/index">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li class="dropdown"><a href="#"><span>Gallery</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li><a href="/gallery" class="active">Nature</a></li>
+              <li><a href="/gallery">People</a></li>
+              <li><a href="/gallery">Architecture</a></li>
+              <li><a href="/gallery">Animals</a></li>
+              <li><a href="/gallery">Sports</a></li>
+              <li><a href="/gallery">Travel</a></li>
+              {% comment %} <li class="dropdown"><a href="#"><span>Sub Menu</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li><a href="#">Sub Menu 1</a></li>
+                  <li><a href="#">Sub Menu 2</a></li>
+                  <li><a href="#">Sub Menu 3</a></li>
+                </ul>
+              </li> {% endcomment %}
+            </ul>
+          </li>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/viewcart ">Cart</a></li>
+        </ul>
+      </nav><!-- .navbar -->
+
+      <div class="header-social-links">
+        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="https://www.facebook.com/" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/aqiiiib__01?igsh=MzRlODBiNWFlZA==" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+      </div>
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main" data-aos="fade" data-aos-delay="1500">
+
+    <!-- ======= End Page Header ======= -->
+    <div class="page-header d-flex align-items-center">
+      <div class="container position-relative">
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-6 text-center">
+            <h2>Aaqib Farooqui</h2>
+            <p>Aaqib Farooqui's career as a professional photographer is a testament to his artistic prowess and commitment to visual storytelling. With a keen eye for detail and a passion for capturing emotion, he has navigated diverse genres, creating a portfolio that resonates with authenticity and creativity. Aaqib's career is marked by continuous innovation and a relentless pursuit of excellence in the ever-evolving world of photography.</p>
+
+            {% comment %} <a class="cta-btn" href="contact.html">Available for hire</a> {% endcomment %}
+
+          </div>
+        </div>
+      </div>
+    </div><!-- End Page Header -->
+
+    <!-- ======= Gallery Single Section ======= -->
+    <section id="gallery-single" class="gallery-single">
+      <div class="container">
+
+        <div class="position-relative h-100">
+          <div class="slides-1 portfolio-details-slider swiper">
+            <div class="swiper-wrapper align-items-center">
+
+              <div class="swiper-slide">
+                <img src="{% static 'assets/img/gallery/gallery-16.jpg' %}" alt="" height="700px" width="80%">
+              </div>
+              <div class="swiper-slide">
+                <img src="{% static 'assets/img/gallery/gallery-9.jpg' %}" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="{% static 'assets/img/gallery/gallery-10.jpg' %}" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="{% static 'assets/img/gallery/gallery-11.jpg' %}" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="{% static 'assets/img/gallery/gallery-12.jpg' %}" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="{% static 'assets/img/gallery/gallery-13.jpg' %}" alt="">
+              </div>
+
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+
+        </div>
+
+        <div class="row justify-content-between gy-4 mt-4">
+
+          <div class="col-lg-8">
+            <div class="portfolio-description">
+              <h2>My portfolio detail</h2>
+              <p>
+               I am Aaqib Farooqui, a distinguished professional photographer, brings an unparalleled vision to the realm of visual storytelling. With a keen eye for detail and a passion for capturing moments that transcend time, his portfolio encapsulates a diverse array of subjects. 
+              </p>
+              <p>
+                From breathtaking landscapes to compelling portraits, My work seamlessly blends technical expertise with artistic flair. His dedication to the craft is evident in each meticulously composed image, showcasing a mastery of light, composition, and emotion. My portfolio is a testament to his commitment to delivering captivating visual narratives, making him a sought-after talent in the dynamic world of photography.
+              </p>
+
+              <div class="testimonial-item">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  Photography, an art of frozen moments, captures beauty, emotion, and storytelling through lenses. Visual poetry, light manipulation, composition mastery, and creative frames merge in a photographer's vision. Precision, perspective, and patience shape captivating images. Shadows dance, colors speak, and details whisper in a well-crafted photograph. Shutter magic freezes time, revealing unseen narratives. Each click echoes a thousand words, a testament to the photographer's skill. Dynamic, evocative, and timeless, photography is a universal language.
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <div>
+                  <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                  <h3>Aaqib Farooqui</h3>
+                  <h4>Professional Photographer</h4>
+                </div>
+              </div>
+
+              <p>
+                Photography, a symphony of pixels and light, encapsulates life's essence in still frames. Through the viewfinder, artists weave visual tapestries, capturing emotions, textures, and atmospheres. Composition whispers secrets, while exposure paints reality's nuances. Lens as a storyteller, framing narratives in clicks. Ephemeral beauty etched into pixels, a testament to fleeting moments. Aperture and shutter speed dance, crafting visual poetry
+
+              <p>
+                Photographic alchemy transforms mundane into art, freeze-framing the extraordinary. Portraits mirror souls, landscapes echo serenity, and macro unveils hidden worlds. Photographer's canvas transcends reality, revealing the sublime. Each photograph tells a tale, a silent dialogue between the artist and the viewer.
+
+
+
+
+
+
+
+              </p>
+
+            </div>
+          </div>
+
+          <div class="col-lg-3">
+            <div class="portfolio-info">
+              <h3>Project information</h3>
+              <ul>
+                <li><strong>Category</strong> <span>Nature Photography</span></li>
+                <li><strong>Client</strong> <span>IT VEDANT</span></li>
+                <li><strong>Project date</strong> <span>12 January, 2024</span></li>
+                <li><strong>Project URL</strong> <a href="#">www.example.com</a></li>
+                <li><a href="#" class="btn-visit align-self-start">Visit Website</a></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Gallery Single Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+
+  
+  <footer id="footer" class="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Aaqib Farooqui</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/photofolio-bootstrap-photography-website-template/ -->
+        Designed by <a href="https://www.instagram.com/aqiiiib__01?igsh=MzRlODBiNWFlZA==">Aaqib Farooqui</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader">
+    <div class="line"></div>
+  </div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>

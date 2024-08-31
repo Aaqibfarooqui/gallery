@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block 'main' %}
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="row" style="margin-top: 100px;">
+    
+    {% for i in data %}
+    <div class="col-md-6">
+      <img src="{{i.portrait.url}}" style="border: 1px solid white; border-radius: 25px;" width="100%">
+    </div>
+
+    <div class="col-md-6">
+      <h1 class="bg-success text-white p-3">Product Details</h1>&nbsp;&nbsp;&nbsp;
+     <p><b><h3>Name:</h3></b><h5>{{i.name}}</h5></p>
+     <p><b><h3>Price:</h3></b><h5>{{i.price}}</h5></p>
+     <p><b><h3>description:</h3></b><h5>{{i.description}}</h5></p>
+     <a href="/addtocart/{{i.id}}"><input type="button" class="btn btn-success" value="Add to Cart"></a>&nbsp;&nbsp;&nbsp;
+     <a href="/viewcart"><input type="button" class="btn btn-success" value="View Cart"></a>
+     <p style="color: rgb(32, 179, 110);">{{msg}}</p>
+      <p style="color: rgb(32, 179, 110);">{{success}}</p>
+    </div>
+    
+    <div class="about">
+      <p>
+        <h1>{{i.writer}}</h1><br>
+        <h3>{{i.subj}}</h3><br>
+        <p><h5>{{i.summary}}</h5></p>
+      
+      
+
+
+      </p>
+
+    </div>
+    
+    {% endfor %}
+  </div>
+</body>
+</html>
+  
+{% endblock 'main' %}
+
+
+
+
+
+
+
+
+
+  
+

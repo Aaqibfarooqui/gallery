@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{% block 'main' %}
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+</head>
+
+<body>
+    <!--Main start-->
+    <div class="container"><br><br><br><br>
+        <div class="row">
+            <div class="col-md-9"><!--Customer Details & product start-->
+                
+
+                <div class="row">
+                    <h5 class="bg-success text-white p-3">Product Details</h5>
+                    {% for x in data %}
+                    <div class="col-md-4" id="art">
+                        <img src="{{x.pid.portrait.url}}" style="border: 1px solid white;
+                        border-radius: 25px;" width="100%">
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <p><strong>Product Name:</strong>&nbsp;&nbsp;&nbsp;{{x.pid.username}}</p>
+                        <p><strong>Price:</strong>&nbsp;&nbsp;&nbsp;Rs.{{x.pid.price}}</p>
+                        {% if x.pid.cat == 1 %}
+                            <p class="card-text">Forest</p>
+                        {% elif x.pid.cat == 2 %}
+                            <p class="card-text">Art</p>
+                        {% else %}
+                            <p class="card-text">People</p>
+                        {% endif %}
+                        <p><strong>Product Description:</strong>&nbsp;&nbsp;&nbsp;{{x.pid.description}}</p>
+                        <p>
+                            <strong>QTY: </strong>
+                            <a href="/updateqty/0/{{x.id}}"><button class="btn btn-success">-</button></a>
+                            <input type="number" name="" id="" value="{{x.qty}}">
+                            <a href="/updateqty/1/{{x.id}}"><button class="btn btn-success">+</button></a>
+                        </p>
+                        <a href="/remove/{{x.id}}"><button class="btn btn-success">Remove</button></a>
+                    </div>
+                    {% endfor %}
+                    
+                </div>
+            </div><!--Customer Details end-->
+
+            <div class="col-md-3"><!--Total amount start-->
+               
+                {% for x in data %}
+                {% if forloop.counter == 1 %}
+                <h4 class="bg-success text-white p-3">Customer Details</h4>
+                <p><strong>Name:</strong>&nbsp;&nbsp;&nbsp;{{x.uid.username}}</p>
+                <p><strong>Mobile:</strong>&nbsp;&nbsp;&nbsp;8070753143</p>
+                <p><strong>Email:</strong>&nbsp;&nbsp;&nbsp;{{x.uid.email}}</p>
+                {% endif %}
+                {% endfor %}
+
+                <hr>
+                <h4 class="bg-success text-white p-3">Total Amount</h4>
+
+                <p><strong>Total({{total}} items): </strong> &nbsp;&nbsp;₹.{{total}}/-</p>
+                <hr>
+                <p><strong>Total Amount: </strong> &nbsp;&nbsp;&nbsp;₹. {{total}}/-</p>
+                <a href="/placeorder"><button class="btn btn-success">Place Order</button></a>
+            </div>
+        </div>
+    </div>
+
+    <!--Main end-->
+
+    <!--<script src="asset/js/bootstrap.min.js"></script>-->
+</body>
+
+</html>
+
+{% endblock 'main' %}
